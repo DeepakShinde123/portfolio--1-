@@ -1,33 +1,34 @@
-import { Mail, Phone } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+// /components/contact-section.js
+
+import { IoMdMailUnread } from "react-icons/io";
+import { FaPhoneAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="container py-12 md:py-24">
-      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 p-4">Contact</h2>
-      <div className="grid gap-6 md:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <Mail className="mr-2 h-4 w-4" /> Email
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-lg">deepak@phleebs.tech</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <Phone className="mr-2 h-4 w-4" /> Phone
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-lg">+91 8652295380</p>
-          </CardContent>
-        </Card>
+    <section
+      id="contact"
+      className="bg-secondary py-20 text-secondary-foreground"
+    >
+      <div className="container mx-auto px-4">
+        <h2 className="mb-12 text-3xl font-bold underline">Contact</h2>
+        <div className="grid gap-8 md:grid-cols-2">
+          <motion.div className="flex items-center space-x-4 rounded-lg border-2 bg-background p-6 shadow-lg">
+            <IoMdMailUnread className="h-8 w-8 text-primary" />
+            <div>
+              <h3 className="font-semibold text-foreground">Email</h3>
+              <p className="text-muted-foreground">deepak@phleebs.tech</p>
+            </div>
+          </motion.div>
+          <motion.div className="flex items-center space-x-4 rounded-lg border-2 bg-background p-6 shadow-lg">
+            <FaPhoneAlt className="h-8 w-8 text-primary" />
+            <div>
+              <h3 className="font-semibold text-foreground">Phone</h3>
+              <p className="text-muted-foreground">+91 8652295380</p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
-  )
+  );
 }
-
