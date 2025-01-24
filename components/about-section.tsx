@@ -6,18 +6,14 @@ export function AboutSection() {
       <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 p-4">About Me</h2>
       <Card>
         <CardHeader>
-          <CardTitle>Passionate Full Stack Developer</CardTitle>
+          <CardTitle></CardTitle>
         </CardHeader>
         <CardContent className="grid gap-4">
           <p className="text-muted-foreground">
-            I am a dedicated full stack developer with expertise in the MERN (MongoDB, Express.js, React, Node.js) stack. 
-            With a strong foundation in both front-end and back-end development, I create seamless web applications that 
-            deliver exceptional user experiences.
+           I'm a Full Stack Developer focused on building responsive and high-performance applications. With expertise in Next.js, TypeScript, and modern web technologies, I create innovative digital solutions that solve real-world problems and deliver seamless user experiences.
           </p>
           <p className="text-muted-foreground">
-            Throughout my journey, I've completed several certifications and built multiple projects that showcase my 
-            skills in modern web development technologies. I'm passionate about writing clean, efficient code and staying 
-            up-to-date with the latest industry trends.
+           With a focus on clean code and efficient development, I build dynamic and scalable applications that solve real-world challenges. I’m passionate about creating intuitive user interfaces and ensuring smooth functionality, all while leveraging the latest web technologies to deliver top-notch digital experiences. Let's turn your ideas into reality!
           </p>
         </CardContent>
       </Card>
