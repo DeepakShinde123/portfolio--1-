@@ -54,7 +54,7 @@ function SkillIcon({ name, icon }: { name: string; icon: string }) {
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="container py-12 md:py-24">
+    <section id="skills" className="container py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Skills</h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((category) => (
@@ -76,4 +76,3 @@ export function SkillsSection() {
     </section>
   )
 }
-
