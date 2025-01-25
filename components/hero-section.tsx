@@ -1,7 +1,7 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import React, { useCallback } from "react";
 
 const gradientAnimation = keyframes`
   0% { background-position: 0% 50%; }
@@ -75,8 +75,18 @@ const StarButton = styled(motion.button)`
 `;
 
 export function HeroSection() {
+  const handleGetInTouch = useCallback(() => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        contactSection.focus();
+      }, 1000);
+    }
+  }, []);
+
   return (
-    <section className="container flex flex-col items-center justify-center min-h-screen gap-8 py-12 md:py-24">
+    <section className="container flex flex-col items-center justify-center min-h-screen gap-8 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <motion.h1
         className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -99,9 +109,7 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
       >
-        <Link href="#contact">
-          <StarButton>Get in touch</StarButton>
-        </Link>
+        <StarButton onClick={handleGetInTouch}>Get in Touch</StarButton>
       </motion.div>
     </section>
   );
