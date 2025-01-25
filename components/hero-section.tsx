@@ -88,12 +88,12 @@ export function HeroSection() {
   return (
     <section className="container flex flex-col items-center justify-center min-h-screen gap-8 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <motion.h1
-        className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center max-w-full"
+        className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <GradientText className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl whitespace-nowrap overflow-hidden text-ellipsis">
+        <GradientText className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap">
           Hi, I'm Deepak Shinde
         </GradientText>
       </motion.h1>
