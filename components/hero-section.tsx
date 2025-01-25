@@ -1,6 +1,7 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const gradientAnimation = keyframes`
   0% { background-position: 0% 50%; }
@@ -26,6 +27,53 @@ const GradientText = styled.span`
   text-fill-color: transparent;
 `;
 
+const starAnimation = keyframes`
+  0%, 100% { clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+  50% { clip-path: polygon(50% 30%, 61% 55%, 98% 55%, 68% 77%, 79% 100%, 50% 90%, 21% 100%, 32% 77%, 2% 55%, 39% 55%); }
+`;
+
+const StarButton = styled(motion.button)`
+  position: relative;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      45deg,
+      #ff4500,
+      #ff1493,
+      #ff0000,
+      #8a2be2,
+      #ffff00,
+      #0000ff
+    );
+    z-index: -1;
+    animation: ${starAnimation} 4s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background-color: black;
+    z-index: -1;
+  }
+`;
+
 export function HeroSection() {
   return (
     <section className="container flex flex-col items-center justify-center min-h-screen gap-8 py-12 md:py-24">
@@ -46,6 +94,15 @@ export function HeroSection() {
         Full Stack Developer building accessible, high-performance web apps with
         modern technologies.
       </motion.p>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <Link href="#contact">
+          <StarButton>Get in touch</StarButton>
+        </Link>
+      </motion.div>
     </section>
   );
 }
