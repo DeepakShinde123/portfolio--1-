@@ -82,7 +82,7 @@ export function ProjectsSection() {
       className="container mx-auto py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
     >
       <motion.h2
-        className="mb-12 text-center text-3xl font-bold"
+        className=" sm:text-4xl md:text-5xl mb-12 text-3xl text-center font-bold"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

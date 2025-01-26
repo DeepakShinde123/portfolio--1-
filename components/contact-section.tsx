@@ -1,16 +1,14 @@
-import { IoMdMailUnread } from "react-icons/io";
-import { FaPhoneAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { Linkedin, Github } from "lucide-react";
-import Link from "next/link";
+import { IoMdMailUnread } from "react-icons/io"
+import { FaPhoneAlt } from "react-icons/fa"
+import { motion } from "framer-motion"
+import { Linkedin, Github } from "lucide-react"
+import Link from "next/link"
 
 export function ContactSection() {
   return (
     <section id="contact" className="py-20 outline-none" tabIndex={-1}>
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl text-center">
-          Get in Touch
-        </h2>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Get in Touch</h2>
         <div className="grid gap-8 md:grid-cols-2 mb-12">
           <Link
             href="mailto:deepak@phleebs.tech"
@@ -40,10 +38,7 @@ export function ContactSection() {
             rel="noopener noreferrer"
             className="transition-transform hover:scale-110"
           >
-            <Linkedin
-              className="h-8 w-8 text-primary"
-              aria-label="LinkedIn Profile"
-            />
+            <Linkedin className="h-8 w-8 text-primary" aria-label="LinkedIn Profile" />
           </Link>
           <Link
             href="https://github.com/DeepakShinde123"
@@ -51,13 +46,11 @@ export function ContactSection() {
             rel="noopener noreferrer"
             className="transition-transform hover:scale-110"
           >
-            <Github
-              className="h-8 w-8 text-primary"
-              aria-label="GitHub Profile"
-            />
+            <Github className="h-8 w-8 text-primary" aria-label="GitHub Profile" />
           </Link>
         </div>
       </div>
     </section>
-  );
+  )
 }
+
