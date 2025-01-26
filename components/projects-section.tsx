@@ -21,7 +21,14 @@ const projects = [
     description:
       "Features a contact form designed to collect user information, including name and email address. This form is intended for users to reach out or submit inquiries.",
     image: "/untitled.png", // Make sure this is a valid local path
-    technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
+    technologies: [
+      "Htnml",
+      "CSS",
+      "Javascript",
+      "DaisyUI",
+      "TailWindCSS",
+      "Vite",
+    ],
     demoLink: "https://untitled-ui.pages.dev/",
     githubLink: "https://github.com/DeepakShinde123/untitled-UI",
   },
@@ -30,7 +37,14 @@ const projects = [
     description:
       "A collaborative task management application with real-time updates and team communication features.",
     image: "/fisker.png",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "WebSockets"],
+    technologies: [
+      "Html",
+      "CSS",
+      "ReactJs",
+      "NextJS",
+      "TailWindCSS",
+      "DaisyUI",
+    ],
     demoLink: "https://fisker-nextjs-xi.vercel.app/",
     githubLink: "https://github.com/DeepakShinde123/fisker-nextjs",
   },
@@ -39,7 +53,14 @@ const projects = [
     description:
       "Wakati API is an advanced text intelligence platform designed to analyze and calculate text scores with AI modules.",
     image: "/Wakati.png",
-    technologies: ["Vue.js", "Python", "Flask", "SQLAlchemy"],
+    technologies: [
+      "Hono",
+      "Zod-OpenAPI",
+      "Stoker",
+      "TypeScript",
+      "Vitest",
+      "Pino",
+    ],
     demoLink: "https://wakati.ds3618037.workers.dev/",
     githubLink: "https://github.com/tiwakati/wakati",
   },
