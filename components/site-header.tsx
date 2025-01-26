@@ -1,33 +1,33 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react"
+import Link from "next/link"
 
-import { MainNav } from "@/components/main-nav";
-import { MobileNav } from "@/components/mobile-nav";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { MainNav } from "@/components/main-nav"
+import { MobileNav } from "@/components/mobile-nav"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteHeader() {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      const currentScrollY = window.scrollY
 
       if (currentScrollY > lastScrollY) {
-        setIsVisible(false);
+        setIsVisible(false)
       } else {
-        setIsVisible(true);
+        setIsVisible(true)
       }
 
-      setLastScrollY(currentScrollY);
-    };
+      setLastScrollY(currentScrollY)
+    }
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true })
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [lastScrollY])
 
   return (
     <header
@@ -39,7 +39,7 @@ export function SiteHeader() {
         <MobileNav />
         <div className="flex items-center justify-between flex-1">
           <div className="flex items-center space-x-2">
-            <Link href="/" className="font-bold px-2 py-1 text-foreground">
+            <Link href="/" className="font-bold px-2 py-1 text-foreground text-lg">
               Deepak Shinde
             </Link>
           </div>
@@ -50,5 +50,6 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  );
+  )
 }
+
