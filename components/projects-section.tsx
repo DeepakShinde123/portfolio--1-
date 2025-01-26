@@ -65,13 +65,13 @@ const projects = [
     githubLink: "https://github.com/tiwakati/wakati",
   },
   {
-    title: "Blog Platform",
+    title: "Prioritask-V2",
     description:
-      "A full-featured blog platform with user authentication, comment system, and markdown support.",
-    image: "/blog-platform.png", // Add image
-    technologies: ["Express.js", "MongoDB", "EJS", "Passport.js"],
-    demoLink: "https://blog-platform-demo-link.com", // Add demo link
-    githubLink: "https://github.com/yourusername/blog-platform",
+      "A feature-rich todo application with task categorization, reminders, and progress tracking",
+    image: "Prioritask.png", // Add image
+    technologies: ["React", "TypeScript", "Tailwind CSS", "DaisyUI", "Vite"],
+    demoLink: "https://prioritask-v2-bx8.pages.dev/", // Add demo link
+    githubLink: "https://github.com/DeepakShinde123/Prioritask-V2",
   },
 ];
 
